@@ -141,3 +141,4 @@ Each group should designate one member to upload the latest version of the templ
   - Update and upload the same document with completed sections for each sprint by their deadlines.  
 - **Final Submission:**  
   - Ensure your final Project Report Template includes all sections, ER diagrams, schemas, queries, indexing details, and any other requirements mentioned above.
+  
