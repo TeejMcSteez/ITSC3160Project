@@ -2,7 +2,11 @@ CREATE TABLE USERS IF NOT EXISTS (
     CLIENT_ID VARCHAR(255) PRIMARY KEY AUTO_INCREMENT,
     ACCESS_TOKEN VARCHAR(255) NOT NULL,
     ROLE TEXT NOT NULL,
-    EXPIRY TIMESTAMP NOT NULL, /*
+    EXPIRY TIMESTAMP NOT NULL,
+
+    
+    
+    /*
                         Not sure if we
     want to use timestamp or just the time in x reading as a number
                 Read below for more info about the issue.
@@ -25,6 +29,12 @@ CREATE TABLE USERS IF NOT EXISTS (
 
     However this method has technical debt as you have to learn the timestamp
     syntax and it is not as readable as just using a number. But more flexible.
+
+    I like the idea of using Timestamp since it's more of a realistic, flexible approach tbh.
+
+    
+
+    
     */
     FOREIGN KEY (CLIENT_ID) REFERENCES ADMIN(MASTER_TOKEN),
 );
