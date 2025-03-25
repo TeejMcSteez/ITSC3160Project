@@ -1,28 +1,8 @@
 # OAuth SQL System Design
 
-## Basic Authentication (Many to Many)
-
-provides a basic access flow to validate anyone allowed by the developer(s).
-
-There can be many users for that system that all use the same secret, making it easier to authenticate lower level systems with small userbase.
-
-It cannot distribute keys from itself only validate users added beforehand.
-Users can be added via dashboard by the developer(s) therefore that information is not stored in the table, for security.
-
-Has information such as
-
-- ID (for databse)
-- Username (for each person)
-- pasword_hash (for each person)
-- client_name (handed back to client based off username and password)
-- client_secret (handed back to client based off username and password)
-- expires_in (handed back with token to designate how long its valid for)
-
-Client sends off username and password to provider then provider references the username and password hash to generate a client name and client secret used to authenticate the user. Meaning the person only has to enter there password one time then they are authenticated to the site until the time expires.
-
 ## Session/Master Authentication (One to Many)
 
-Provides complex access flow to validate an admin user as well as have that admin assign new users.
+Provides access flow to validate an admin user as well as have that admin assign new users.
 
 There is a master secret that is used to generate new tokens to make new users.
 
