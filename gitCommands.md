@@ -9,5 +9,7 @@ git pull origin master
 git checkout -b comaster
 
 git add .
+
 git commit -m "message"
+
 git push origin master
