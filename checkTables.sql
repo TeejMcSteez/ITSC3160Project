@@ -1,0 +1,3 @@
+USE OAuthSystem;
+
+SELECT * FROM ADMIN, USERS;
