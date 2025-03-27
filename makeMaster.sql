@@ -8,8 +8,7 @@ USE OAuthSystem;
 CREATE TABLE ADMIN IF NOT EXISTS (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     ENTITY_ID VARCHAR(255) NOT NULL UNIQUE,
-    MASTER_TOKEN_ID VARCHAR(255) NOT NULL --changed to MASTER_TOKEN_ID for clarity, and so it matches the foreign keys in the USERS table
-    
+    MASTER_TOKEN VARCHAR(255) NOT NULL UNIQUE
 );
 
 INSERT INTO ADMIN VALUES (1, "Entity1", "supersecrettoken1");

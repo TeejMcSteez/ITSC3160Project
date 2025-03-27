@@ -1,0 +1,16 @@
+USE OAuthSystem;
+
+SELECT * FROM ADMIN, USERS;
+
+
+/*  Sample queries to test the ADMIN table */
+SELECT * FROM ADMIN WHERE ID = 1;
+SELECT * FROM ADMIN WHERE ID = 2;
+SELECT * FROM ADMIN WHERE ID = 3;
+
+
+/* Sample queries to test the USERS table*/ 
+
+SELECT * FROM USERS WHERE ADMIN_ID = 1;
+SELECT * FROM USERS WHERE ADMIN_ID = 2;
+SELECT * FROM USERS WHERE ADMIN_ID = 3;
