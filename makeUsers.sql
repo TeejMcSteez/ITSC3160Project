@@ -21,10 +21,3 @@ INSERT INTO USERS VALUES ("User1", "supersecrettoken1", "USER", TIMESTAMP(NOW(),
 INSERT INTO USERS VALUES ("Bill Gates", "supersecrettoken2", "PREMIUM_USER", TIMESTAMP(NOW(), INTERVAL 24 HOUR),2);
 INSERT INTO USERS VALUES ("Linus Torvald", "supersecrettoken3", "MODERATOR", TIMESTAMP(NOW(), INTERVAL 7 DAY),3);
 
-SELECT * FROM USERS;
-
-/* Sample queries to test the table*/ 
--- switched from client id to admin id 
-SELECT * FROM USERS WHERE ADMIN_ID = 1;
-SELECT * FROM USERS WHERE ADMIN_ID = 2;
-SELECT * FROM USERS WHERE ADMIN_ID = 3;
