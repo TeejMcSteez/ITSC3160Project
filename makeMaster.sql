@@ -1,11 +1,11 @@
+-- Commented out to avoid errors at all if already made
+-- CREATE database OAuthSystem;            -- Switched the place of the IF EXISTS and CREATE statements to avoid errors if the database already exists. (For both tables)
 
-CREATE database OAuthSystem;            -- Switched the place of the IF EXISTS and CREATE statements to avoid errors if the database already exists. (For both tables)
-
-DROP DATABASE IF EXISTS OAuthSystem;
+-- DROP DATABASE IF EXISTS OAuthSystem;
 
 USE OAuthSystem;
 
-CREATE TABLE ADMIN IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ADMIN  (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     ENTITY_ID VARCHAR(255) NOT NULL UNIQUE,
     MASTER_TOKEN VARCHAR(255) NOT NULL UNIQUE
