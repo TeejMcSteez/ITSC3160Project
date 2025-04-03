@@ -1,10 +1,12 @@
-
+	
 -- Commented out database stuff if its already made.
 -- CREATE database OAuthSystem;
 
 -- DROP DATABASE IF EXISTS OAuthSystem;
 
 USE OAuthSystem;
+
+DROP TABLE IF EXISTS USERS;
 
 CREATE TABLE IF NOT EXISTS USERS (
     CLIENT_ID VARCHAR(255) PRIMARY KEY,
