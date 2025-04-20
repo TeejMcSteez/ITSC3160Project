@@ -1,0 +1,7 @@
+SET GLOBAL event_scheduler = ON;
+
+CREATE EVENT daily_expired_cleanup
+ON SCHEDULE EVERY 1 DAY
+DO
+	DELETE FROM USERS
+    WHERE EXPIRY <= NOW();

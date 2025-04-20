@@ -1,3 +1,5 @@
+DELIMITER //
+
 CREATE PROCEDURE remove_user_token(IN target_client_id VARCHAR(255))
 BEGIN
   DECLARE adminRef INT;
@@ -8,3 +10,5 @@ BEGIN
   INSERT INTO AUDIT_LOG (EVENT_TYPE, CLIENT_ID, ADMIN_ID)
   VALUES ('DELETE', target_client_id, adminRef);
 END;
+
+DELIMITER ;
